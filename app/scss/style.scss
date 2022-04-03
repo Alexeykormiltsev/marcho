@@ -454,9 +454,9 @@
   text-align: center;
 
   &__items {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-gap: 45px 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px 30px;
   }
 
   &__link {
@@ -563,22 +563,91 @@
     text-decoration: line-through;
     color: #ccccce;
   }
+
   &--sale {
-   .product-item__img-box::before {
-    content: 'SALE';
-    @extend %btn;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    line-height: 1;
-   }
+    .product-item__img-box::before {
+      content: 'SALE';
+      @extend %btn;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      line-height: 1;
+    }
   }
-    
-}
-.star {
- margin: 0 auto;
+
 }
 
+.star {
+  margin: 0 auto;
+}
+
+.promo {
+  background-image: url('../images/promo-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 150px 0 160px;
+  text-align: center;
+
+  &__inner {
+    max-width: 570px;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__subtitle {
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $accent;
+    margin-bottom: 10px;
+  }
+
+  &__clock {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+  }
+
+  &__clock-item {
+    width: 121px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__times {
+    @extend %roboto-700;
+    font-size: 48px;
+    color: $title;
+    margin: 10px 0 7px;
+  }
+
+  &__link {
+    line-height: 26px;
+    text-transform: uppercase;
+    color: $title;
+    display: inline-block;
+    padding: 14px 27px;
+    border: 1px solid $accent;
+    margin-top: 55px;
+  }
+}
+
+.partners {
+  padding-top: 75px;
+
+  &__list {
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 
 

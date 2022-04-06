@@ -649,6 +649,122 @@
   }
 }
 
+.blog {
+  padding: 50px 0 160px;
+  background-image: url('../images/blog-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 80%;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20px;
+      top: -25px;
+      background-image: url('../images/decor/blog-decor.png');
+      width: 126px;
+      height: 53px;
+      z-index: -1;
+    }
+
+  }
+
+  &__item {
+    max-width: 370px;
+    border: 1px solid #ececec;
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.34);
+      border: none;
+
+      .blog__item-link {
+        color: $accent;
+
+        &::after {
+          background-image: url('../images/icons/arrow-blog-accent.svg');
+        }
+
+      }
+    }
+  }
+
+  &__item-imglink {
+    display: block;
+
+    img {
+      height: 288px;
+      // object-fit: cover;
+    }
+  }
+
+  &__item-box {
+    padding: 30px 40px;
+  }
+
+  &__item-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__item-date {
+    line-height: 36px;
+  }
+
+  &__item-autor,
+  &__item-date {
+    padding-left: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &__item-autor::before {
+    background-image: url('../images/icons/user-blog.svg');
+    background-repeat: no-repeat;
+  }
+
+  &__item-date::before {
+    background-image: url('../images/icons/clock-blog.svg');
+    background-repeat: no-repeat;
+  }
+
+
+  &__item-title {
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 32px;
+    color: $title;
+    margin-bottom: 20px;
+  }
+
+  &__item-link {
+    position: relative;
+  }
+
+  &__item-link::after {
+    content: '';
+    width: 12px;
+    height: 11px;
+    background-image: url('../images/icons/arrow-blog.svg');
+    position: absolute;
+    top: 4px;
+    right: -14px;
+  }
+}
+
 
 
 

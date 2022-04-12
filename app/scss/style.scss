@@ -181,6 +181,18 @@
   }
 }
 
+.top {
+  &__container {
+    max-width: 1700px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 0 130px;
+    text-align: center;
+  }
+}
+
 .top-slider {
   background-image: url('../images/top-slider-bg.png');
   background-repeat: no-repeat;
@@ -698,7 +710,7 @@
 
     img {
       height: 288px;
-      // object-fit: cover;
+      object-fit: cover;
     }
   }
 
@@ -765,7 +777,60 @@
   }
 }
 
+.modal {
+  padding-top: 100px;
+  max-width: 570px;
+  margin: 0 auto 115px;
 
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #909090;
+    margin: 0 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: none;
+    height: 60px;
+    background-color: $bg;
+    padding: 0 15px;
+    margin-top: 5px;
+  }
+
+  &__btn {
+  display: block;
+   width: 100%;
+   height: 60px;
+   border: none;
+   background-color: #292929;
+   color: #fff;
+   text-transform: uppercase;
+   cursor: pointer;
+   letter-spacing: 0.2em;
+   margin-bottom: 12px;
+  }
+  &__error {
+   color: $accent;
+  }
+}
 
 
 
